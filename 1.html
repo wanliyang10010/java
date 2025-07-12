@@ -1,0 +1,179 @@
+
+
+<html>
+  <head>
+    <title>标志明码查询</title>
+    <meta charset="utf-8">
+    <link href="global.css" rel="stylesheet"  charset="utf-8" type="text/css"/>
+    <link href="fhm.css" rel="stylesheet" charset="utf-8"  type="text/css"/>   
+  </head>
+ 
+<body>
+  <!-- form1  开始 -->
+  <form name="form1">  
+    <br>
+    <input type="hidden" name="isFirst" value="isNotFirst">
+    <input type="hidden" name="start" value="0">
+    <input type="hidden" name="ipAddress" id="ipAddress" value="42.235.130.165">
+    <input type="hidden" name="curPageNum" value="null">    	
+        <input type="hidden" name="queryValue" value="null">
+    <br>
+    <!-- 查询表格  开始 -->
+    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  -->  
+    
+   
+    <table class="Inquiry" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="Inquiry1"><h1 class="cpbt">标志明码查询</h1>
+          <label class="btwz">
+            <input class="bt" type="button" name="queryData2" id="button" value="查询" onClick="queryData()" style="cursor:hand;">
+            <input class="bt" type="button" name="button" id="button" value="重置" onClick="clearForm()" style="cursor:hand;">
+          </label>
+        </td>
+      </tr>     
+      <tr>
+        <td colspan="2" align="center" valign="top">
+               
+    <table class="wb" width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="font_color pad_left" width="50%" height="30" valign="middle" style="#000000" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;标志明码：
+          <input type="hidden" name="recordFactoryId" value="">		    
+          <input class="kuang" title="" maxlength="25" align="top" style="width:60%" name="lableCode" value="70731111">   
+        </td>
+        <td class="font_color pad_left" valign="middle" style="#000000" nowrap>
+        	&nbsp;&nbsp;&nbsp;&nbsp;查询次数：<input class="kuang" title="" maxlength="5" align="top" style="width:5%" name="queryCount" readonly="readonly">  
+        	&nbsp;&nbsp;&nbsp;&nbsp;上次查询IP地址：<input class="kuang" title="" maxlength="25" align="top" style="width:35%" name="ipAddr" readonly="readonly"/>
+        </td>
+      </tr>
+    </table>
+    
+        </td>
+      </tr>
+    </table>
+    <!-- 查询表格  结束 -->
+
+
+	  <!--产品流向信息查询结果  开始-->
+	
+	<table width="96%" border="1" cellpadding="0" cellspacing="0" bordercolor="#929292" class="Tabulation" style="border-collapse:collapse;">
+		<tr class="h2">
+			<td class="pad_left" valign="middle"  style="color:#900" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;产品生产信息</td>
+			<td colspan="3">
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;<font color=red>没有查询到此明码标志的产品生产信息！</font>
+
+			
+			</td>
+		</tr>
+		<tr class="h2">
+			<td class="pad_left" valign="middle"  style="#000000" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;生产厂家&nbsp;</td>
+			<td width="40%" align="left" class="pad_left">
+				<input type="text" class="kuang" style="width:80%" value='' readonly>
+			</td>	
+	      <td class="font_color pad_left" valign="middle" style="#000000" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;产品档案号&nbsp;</td>
+			<td width="40%" align="left" class="pad_left">
+				<input type="text" class="kuang" style="width:80%" value='' readonly>
+			</td>	
+		</tr>
+		<tr class="h2">
+			<td class="font_color pad_left" valign="middle" style="#000000"  nowrap>&nbsp;&nbsp;&nbsp;&nbsp;产品名称&nbsp;</td>
+			<td width="40%" align="left" class="pad_left">
+				<input type="text" class="kuang" style="width:80%" value='' readonly>
+			</td>	
+			<td class="font_color pad_left" valign="middle" style="#000000"  nowrap>&nbsp;&nbsp;&nbsp;&nbsp;规格型号&nbsp;</td>
+			<td width="40%" align="left" class="pad_left">
+				<input type="text" class="kuang" style="width:80%" value='' readonly>
+			</td>	
+		</tr>
+		<tr class="h2">
+
+			<td class="font_color pad_left" valign="middle" style="#000000"  nowrap>&nbsp;&nbsp;&nbsp;&nbsp;流向地区&nbsp;</td>			
+			<td width="40%"  class="pad_left">
+				<input type="text" class="kuang" style="width:80%" value='' readonly>
+			</td>
+			<td class="font_color pad_left" valign="middle" style="#000000"  nowrap>&nbsp;&nbsp;&nbsp;&nbsp;流向单位&nbsp;</td>			
+			<td width="40%"  class="pad_left">
+				<input type="text" class="kuang" style="width:80%" value='' readonly>
+			</td>
+		</tr>
+		
+		<tr class="h2">
+		   <!--  
+		    <td class=" td_title"  nowrap>&nbsp;产品标签ID&nbsp;</td>
+			<td width="30%" align="left" class="td_data">
+				<input type="text" class="kuang" style="width:80%" value='00L15J00302F02D00L15J00200600F' readonly>
+			</td>	
+		  -->
+		  
+			<td class="font_color pad_left" valign="middle" style="#000000"  nowrap>&nbsp;&nbsp;&nbsp;&nbsp;表单类型&nbsp;</td>
+			<td width="40%" align="left" class="pad_left">
+				<input type="text" class="kuang" style="width:80%" value='' readonly>
+			</td>
+
+			<td class="font_color pad_left" valign="middle" style="#000000"  nowrap>&nbsp;&nbsp;&nbsp;&nbsp;产品批号&nbsp;</td>
+			<td width="40%" align="left" class="pad_left">
+				<input type="text" class="kuang" style="width:80%" value='' readonly>
+			</td>	
+		</tr>
+		<tr class="h2"> 
+			<td class="font_color pad_left" valign="middle" style="#000000"  nowrap>&nbsp;&nbsp;&nbsp;&nbsp;生产时间&nbsp;</td>
+			<td width="40%" align="left" class="pad_left" style="col" colspan="3">
+				<input type="text" class="kuang" style="width:80%" value='' readonly>
+			</td>	
+			<!-- 2019年9月17日 注释掉
+			 <td class="font_color pad_left" valign="middle" style="#000000"  nowrap>&nbsp;&nbsp;&nbsp;&nbsp;合同号&nbsp;</td>			
+			<td width="40%" colspan="3" class="pad_left">
+				<input type="text" class="kuang" style="width:80%" value='' readonly>
+			</td>
+			 -->
+		</tr>
+		<tr class="h2">			
+		    <td class="font_color pad_left" valign="middle" style="#000000"  nowrap>&nbsp;&nbsp;&nbsp;&nbsp;质检员&nbsp;</td>			
+			<td width="40%"  class="pad_left">
+				<input type="text" class="kuang" style="width:80%" value='' readonly>
+		  </td>
+			<td class="font_color pad_left" valign="middle" style="#000000"  nowrap></td>			
+			<td width="40%" class="pad_left">
+				
+			</td>	
+		</tr>
+		
+		<table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+		<td valign="bottom" class="pad_left" style="color:#F00"><a href="#" onclick="openHistory('7073')" type="button">历史查询记录</a></td>
+		
+		</tr>
+		</table>
+</table>
+
+
+
+	<br>
+
+
+	
+<!-- add2017-7-21 18:17:58 -->
+
+<!-- end -->
+<br>
+
+	<table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+	<!-- <td valign="bottom" class="pad_left" style="color:#F00"><a href="#" onclick="connectCertificate2('','','')">证书及检验报告</a></td>-->
+	<td valign="bottom" class="pad_left" style="color:#F00"><a href="#" onclick="connectCertificate()">产品证书等信息请在中国消防产品信息网（www.cccf.com.cn）查询</a></td>
+	</tr>
+	<tr><td style='color: red;padding: 15px;'>
+保密提醒：请严格按照国家法律法规要求使用信息系统，
+严禁在系统中传输、存储或发布任何涉密信息或敏感信息，违者追究相关法律责任。
+	</td></tr>
+	</table>
+  <!--产品流向信息查询结果  结束 --> 	
+	 
+	<!-- 表的尾 开始-->
+	<!-- 表的尾 结束-->
+    
+</form>
+<script language="JavaScript" src="jquery-1.8.3.min.js"></script>
+<script src="https://www.taobao.com/help/getip.php"></script>
+</body>
+</html>
